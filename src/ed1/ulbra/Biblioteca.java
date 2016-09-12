@@ -25,20 +25,28 @@ public class Biblioteca {
 
         System.out.println("LIVRO");
         System.out.println(" ");
-        System.out.println("Titulo: ");
-        this.titulo=ler.nextLine();
+        do {
+            System.out.println("Titulo: ");
+            this.titulo=ler.nextLine();
+            if (titulo.length() < 5)
+            {
+                System.out.println("Digite um nome válido: ");
+                titulo="";
+            }
+        }while(titulo=="");
         System.out.println("Numero de páginas: ");
         this.numPag=ler.nextInt();
         System.out.println("Número de exemplares ");
         this.numExp=ler.nextInt();
         System.out.println("AUTOR ");
         System.out.println(" ");
-        System.out.println("Nome: ");
-        this.nome=ler.nextLine();
-            do {
+        do{
+            System.out.println("Nome: ");
+            this.nome=ler.nextLine();
+
                 if (!nome.matches("^[A-Za-z]*$"))
                 {
-                    System.out.println("Digite um nome válido: ");
+                    System.out.println("Digite um nome válido : ");
                     nome="";
                 }
             }while(nome=="");
@@ -140,8 +148,15 @@ public class Biblioteca {
             for (int i = 0; i < qtd; i++) {
                 System.out.println("LIVRO");
                 System.out.println(" ");
-                System.out.println("Titulo: ");
-                this.titulo=ler.nextLine();
+                    do {
+                        System.out.println("Titulo: ");
+                        this.titulo=ler.nextLine();
+                        if (titulo.length() < 5)
+                        {
+                            System.out.println("Digite um nome válido  : ");
+                            titulo="";
+                        }
+                    }while(titulo=="");
                 System.out.println("Numero de páginas: ");
                 this.numPag=ler.nextInt();
                 System.out.println("Número de exemplares ");
